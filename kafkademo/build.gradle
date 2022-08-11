@@ -5,8 +5,8 @@ plugins {
 }
 
 group = 'com.example.kakfkademo'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '13'
+version = '0.0.1'
+sourceCompatibility = '8'
 
 configurations {
 	compileOnly {
