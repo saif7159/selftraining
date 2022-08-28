@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-kafka
+  labels:
+    app: samplekafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samplekafka
+  template:
+    metadata:
+      labels:
+        app: samplekafka
+    spec:
+      containers:
+      - name: samplekafka
+        image: saif7159/kafka-cicd:latest
+        ports:
+        - containerPort: 9098
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-service
+spec:
+  selector:
+    app.kubernetes.io/name: samplekafka
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 9098
