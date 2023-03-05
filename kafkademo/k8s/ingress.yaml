@@ -6,12 +6,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: bachdi-dev.test
+    http:
       paths:
-      - path: /bachdi-dev.test
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: sample-service
             port:
-              number: 8083
+              name: http

@@ -1,0 +1,22 @@
+server:
+  port: 78
+spring:
+  application:
+    name: gateway-svc
+  cloud:
+    gateway:
+      routes:
+        - id: prototypeSvc
+          uri: lb://PROTOTYPE-SVC
+          predicates:
+            - Path=/api/**
+        - id: prototypeConfig
+          uri: lb://PROTOTYPECONFIG
+          predicates:
+            - Path=/client/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true

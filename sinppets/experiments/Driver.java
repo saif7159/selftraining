@@ -1,10 +1,12 @@
 public class Driver extends AbstractDemo {
-    public static void main(String... args) {
+    static int i;
 
+    public static void main(String... args) {
+        System.out.println(i);
         System.out.println(reverse(543));
     }
 
-    public static int reverse(int value) {
+    public static <T> void reverse(int value) {
         int reversed = 0;
         while (value > 1) {
             int i = value % 10; // i -> 4

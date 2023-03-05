@@ -1,9 +1,13 @@
 public abstract class AbstractDemo {
-    int i = 1;
+    private Integer i = 1;
 
     public AbstractDemo() {
         System.out.println("Base:   " + i);
     }
 
-    abstract void demo();
+    public int getSquare(int x) {
+        return x * x;
+    }
+
+    protected abstract void demo();
 }

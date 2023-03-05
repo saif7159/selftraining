@@ -17,7 +17,6 @@ public class AspectController {
     public int getAge(@PathVariable String player){
         int age = 0;
         try {
-            System.out.println("Hi");
             List<Person> people = SpringaopApplication.getPeople();
             age = people.stream().filter(person -> person.getFirstName().equals(player)).mapToInt(Person::getAge).distinct().findAny().orElse(-1);
         } catch (IOException e) {

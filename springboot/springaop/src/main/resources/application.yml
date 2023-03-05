@@ -1,1 +1,9 @@
-
+server:
+  port: 73
+spring:
+  application:
+    name: aop-example
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:85/eureka/

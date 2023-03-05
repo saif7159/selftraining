@@ -1,0 +1,21 @@
+server:
+  port: 89
+spring:
+  application:
+    name: zuul-gateway-svc
+  config:
+    import: "optional:configserver:"
+zuul:
+  routes:
+    football-svc:
+      path: /football/**
+      service-id: football-svc
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:85/eureka/

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GatewayZuulSvcApplication<gateway-zuul-svc>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.selfpractice.gateway.gatewayzuulsvc.GatewayZuulSvcApplication",
+            "projectName": "gateway-zuul-svc",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

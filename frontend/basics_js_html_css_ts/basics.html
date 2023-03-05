@@ -1,0 +1,36 @@
+<header>
+    <style>
+        h1 {
+            color: aqua;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+    </style>
+    <h1>
+        Basic Example</h1>
+    <div>
+        <script>
+            const store = () => {
+                if (sessionStorage.getItem("counter") != null) {
+                    let count = sessionStorage.getItem("counter");
+                    count++;
+                    sessionStorage.setItem("counter", count);
+                } else {
+                    sessionStorage.setItem("counter", 1);
+                }
+                return sessionStorage.getItem("counter");
+            }
+
+            const locationCheck = () => {
+                navigator.geolocation.getCurrentPosition(successCheck, errorCheck);
+            }
+            const successCheck = (position) => {
+                console.log(position.coords);
+            }
+            const errorCheck = (error) => {
+                console.log(error);
+            }
+            document.write(locationCheck());
+        </script>
+    </div>
+    <header>

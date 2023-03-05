@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: samplekafka
-        image: saif7159/kafka-cicd:latest
+        image: saif7159/kafka-cicd:v7.1.5
         ports:
         - containerPort: 9098
 ---
@@ -26,8 +26,10 @@ metadata:
   name: sample-service
 spec:
   selector:
-    app.kubernetes.io/name: samplekafka
+    app: samplekafka
   ports:
     - protocol: TCP
-      port: 8083
+      port: 9098
       targetPort: 9098
+      name: http
+  type: NodePort

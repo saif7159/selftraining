@@ -1,0 +1,26 @@
+h1 {
+  color: aqua;
+  font-family: sans-serif;
+  align-self: center;
+}
+.saif {
+  color: pink;
+}
+
+.grid {
+  display: inline-grid;
+}
+
+.column {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.item {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.select-button {
+  background-color: burlywood;
+}

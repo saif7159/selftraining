@@ -1,0 +1,18 @@
+server:
+  port: 83
+spring:
+  application:
+    name: prototype-svc
+  cloud:
+    config:
+      server:
+        default-label: master
+        git:
+          uri: https://github.com/saif7159/selftraining.git
+          searchPaths: resource-examples
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
