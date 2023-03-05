@@ -1,0 +1,17 @@
+server:
+  port: 9098
+spring:
+  application:
+    name: kafka-demo-app
+  profiles:
+    active:
+      - dev
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - dev
+kafka-config:
+  broker: Saif:9092
+  topic: saif.kafka.demo.kfk
